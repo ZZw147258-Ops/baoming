@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保险业务员接龙系统</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .header h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: #1890ff;
+        }
+        .session {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid #1890ff;
+        }
+        .session-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .remaining {
+            color: #ff4d4f;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .announcement {
+            background: #fffbe6;
+            border: 1px solid #ffe58f;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        input, select {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        input:focus, select:focus {
+            border-color: #1890ff;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 18px;
+            background: #1890ff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #40a9ff;
+        }
+        .message {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .success { background: #f6ffed; border: 1px solid #b7eb8f; color: #52c41a; }
+        .error { background: #fff2f0; border: 1px solid #ffccc7; color: #ff4d4f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 保险业务员接龙系统</h1>
+            <p>每日场次报名</p>
+        </div>
+
+        <div class="announcement">
+            <strong>📢 公告：</strong>
+            <span id="announcementText">欢迎参加客户接龙活动！请选择场次报名。</span>
+        </div>
+
+        <div class="session">
+            <div class="session-title">上午场 (09:00-12:00)</div>
+            <div class="remaining">剩余名额：<span id="amRemaining">20</span>/20人</div>
+        </div>
+
+        <div class="session">
+            <div class="session-title">下午场 (14:00-17:00)</div>
+            <div class="remaining">剩余名额：<span id="pmRemaining">20</span>/20人</div>
+        </div>
+
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="请输入您的姓名" required>
+            
+            <select id="session" required>
+                <option value="">请选择场次</option>
+                <option value="am">上午场 (09:00-12:00)</option>
+                <option value="pm">下午场 (14:00-17:00)</option>
+            </select>
+
+            <select id="guestCount" required>
+                <option value="">请选择携带人数</option>
+                <option value="1">1人</option>
+                <option value="2">2人</option>
+            </select>
+
+            <input type="tel" id="phone" placeholder="请输入手机号" required>
+
+            <button type="submit">提交报名</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script>
+        // 这里放JavaScript代码，下一步会提供
+    </script>
+</body>
+</html>
